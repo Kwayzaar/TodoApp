@@ -1,13 +1,25 @@
+import React, { useState } from 'react'
 import './App.css';
 import Todos from './components/Todos'
 import TodoCard from './components/TodoCard'
-// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 function App() {
+  const [todos, setTodos] = useState([
+    {id:1, content: 'make todo'},
+    {id:2, content: 'then make another todo'}
+  ])
+
+  const deleteTodo = (id) => {
+    let todos = todos.filter(todo => {
+      return todo.id !== id
+    });
+    setTodos({todos})
+  }
+
   return (
     <div>
-      <Todos />
-      <TodoCard />
+      <h1>Todo's</h1>
+      <Todos todos={todos} deleteTodo={deleteTodo} />
     </div>
   )
 }

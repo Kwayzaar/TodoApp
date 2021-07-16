@@ -1,9 +1,22 @@
 import React from 'react'
 
-export default function Todos() {
+export default function Todos({todos, deleteTodo}) {
+
+  const todoList = todos.length ? (
+    todos.map(todo => {
+      return (
+        <div key={todo.id}>
+          <span onClick={() => {deleteTodo(todo.id)}}>{todo.content}</span>
+        </div>
+      )
+    })
+  ) : (
+    <p>No todos!</p>
+  ) 
+
   return (
     <div>
-      
+      {todoList}
     </div>
   )
 }
