@@ -1,6 +1,6 @@
 import './App.css';
-import './components/Todos'
-import './components/TodoCard'
+import Todos from './components/Todos'
+import TodoCard from './components/TodoCard'
 // import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 function App() {
