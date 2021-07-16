@@ -6,7 +6,7 @@ export default function Todos({todos, deleteTodo}) {
     todos.map(todo => {
       return (
         <div key={todo.id}>
-          <span onClick={() => {deleteTodo(todo.id)}}>{todo.content}</span>
+          <span onClick={() => deleteTodo(todo.id)}>{todo.content}</span>
         </div>
       )
     })

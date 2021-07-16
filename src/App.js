@@ -10,11 +10,9 @@ function App() {
   ])
 
   const deleteTodo = (id) => {
-    let todos = todos.filter(todo => {
-      return todo.id !== id
-    });
-    setTodos({todos})
-  }
+    setTodos(todos.filter(todo => todo.id !== id))
+    }
+  
 
   return (
     <div>
@@ -22,6 +20,6 @@ function App() {
       <Todos todos={todos} deleteTodo={deleteTodo} />
     </div>
   )
-}
+  }
 
 export default App;
