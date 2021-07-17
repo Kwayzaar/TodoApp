@@ -1,22 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
+import TodoForm from './TodoForm'
 
-export default function Todos({todos, deleteTodo}) {
+function Todos({ todos, completeTodo }) {
+  const [edit, setEdit] = useState({
+    id: null, 
+    value: ""
+  })
 
-  const todoList = todos.length ? (
-    todos.map(todo => {
-      return (
-        <div key={todo.id}>
-          <span onClick={() => deleteTodo(todo.id)}>{todo.content}</span>
-        </div>
-      )
-    })
-  ) : (
-    <p>No todos!</p>
-  ) 
+  return todos.map((todo, index) => (
+    <div 
+      className={todo.isComplete ? "todo-row complete" : 'todo-row'} 
+      key={index}
+    >
+      <div key={todo.id} onClick={() => completeTodo(todo.idd)}>
+        {todo.text}
+      </div>
+      <div className="icons">
 
-  return (
-    <div>
-      {todoList}
+      </div>
+
     </div>
-  )
+
+  ))
 }
+
+export default Todos
+
