@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css';
 import Todos from './components/Todos'
-import TodoCard from './components/TodoCard'
+import TodoForm from './components/TodoForm'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -13,11 +13,16 @@ function App() {
     setTodos(todos.filter(todo => todo.id !== id))
     }
   
+  const addTodo = (todo) => {
+    todo.id = Math.random();
+    setTodos({...todos, todo})
+  }
 
   return (
     <div>
       <h1>Todo's</h1>
       <Todos todos={todos} deleteTodo={deleteTodo} />
+      <TodoForm addTodo={addTodo} />
     </div>
   )
   }
