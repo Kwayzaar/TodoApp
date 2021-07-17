@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 function TodoForm(props) {
   const [value, setValue] = useState("");
+
+  const inputRef = useRef(null)
+
+  useEffect(() => {
+    inputRef.current.focus()
+  })
   
     const handleChange = (e) => {
       setValue(e.target.value)
@@ -16,7 +22,6 @@ function TodoForm(props) {
       })
 
       setValue("")
-
     }
   
     return (
@@ -26,6 +31,7 @@ function TodoForm(props) {
           <input 
             value={value} 
             onChange={handleChange} 
+            ref={inputRef}
             type="text" 
             placeholder="add Todo"
           />
