@@ -34,6 +34,7 @@ function TodoForm(props) {
             ref={inputRef}
             type="text" 
             placeholder="add Todo"
+            className="text-black"
           />
           <button>Add Todo</button>
         </form>
