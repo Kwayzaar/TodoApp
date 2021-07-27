@@ -6,7 +6,7 @@ import TodoList from './components/TodoList'
 
 function App() {
   return (
-    <div className="h-screen bg-black flex">
+    <div className="h-screen bg-black flex justify-center items-center">
       <TodoList />
     </div>
   )

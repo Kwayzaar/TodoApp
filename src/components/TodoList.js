@@ -40,8 +40,8 @@ function TodoList() {
   }
 
   return (
-    <div className="text-white flex flex-col w-9/12">
-      <h1 className="align-self-center">Todos</h1>
+    <div className="text-white flex flex-col justify-center items-center w-9/12 h-full">
+      <h1 className="justify-self-center">Todos</h1>
       <TodoForm onSubmit={addTodo} />
       <Todos 
         todos={todos} 
