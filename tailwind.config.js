@@ -8,7 +8,7 @@ module.exports = {
         //   ...theme('colors'),
           'purp-dark': '#8c1eff',
           'purp': '#f222ff',
-          'Red-syn': '#ff2975',
+          'red-syn': '#ff2975',
           'orange-syn': '#ff901f',
           'yellow-syn': '#ffd319',
       },

@@ -34,10 +34,9 @@ function TodoForm(props) {
             onChange={handleChange} 
             ref={inputRef}
             type="text" 
-            placeholder="add Todo"
-            className="text-black"
+            className="bg-black w-80 m-1 rounded border-2 border-purp-dark outline-none"
           />
-          <button className="ml-1">Add</button>
+          <button className="m-1 w-14 border-2 border-purp-dark rounded bg-gradient-to-r from-purp-dark to-purp">Add</button>
         </form>
       </div>
     )
