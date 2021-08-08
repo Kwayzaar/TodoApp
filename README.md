@@ -11,4 +11,7 @@ It's a simple todo app:
 
 https://user-images.githubusercontent.com/74380232/128618986-7fd799f3-0994-4f20-b67c-1253486ab24b.mp4
 
+## Tech
 
+* React
+* Tailwind CSS
